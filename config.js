@@ -1,3 +1,4 @@
+// female Icon https://cdn-icons-png.flaticon.com/512/2922/2922561.png
 const companyInfo = {
   name: "Blink Infotech",
   title: "Blink Infotech - FutureTech Innovations",
@@ -10,7 +11,21 @@ const companyInfo = {
     instagram: "https://instagram.com/blinkinfotech",
     linkedin: "https://linkedin.com/company/blinkinfotech",
     facebook: "https://facebook.com/blinkinfotech"
-  }
+  },
+  teamMembers: [
+    {
+      name: "Raj Bhanderi",
+      role: "Android Developer",
+      image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      link: "https://example.com/raj"
+    },
+    {
+      name: "Dhruv Bhanderi",
+      role: "Android/Flutter Developer",
+      image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
+      link: "https://dhruvbhanderi4868.github.io/"
+    }
+  ]
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -42,5 +57,24 @@ document.addEventListener("DOMContentLoaded", () => {
   favicon.href = companyInfo.favicon;
   favicon.type = "image/png";
   document.head.appendChild(favicon);
+
+  // Generate team section
+  const teamContainer = document.querySelector("#team .grid");
+  if (teamContainer && companyInfo.teamMembers) {
+    companyInfo.teamMembers.forEach(member => {
+      const card = document.createElement("div");
+      card.className = "card team-card";
+      card.onclick = () => window.open(member.link, "_blank");
+
+      card.innerHTML = `
+        <img src="${member.image}" alt="${member.name}" class="team-avatar">
+        <h4>${member.name}</h4>
+        <p>${member.role}</p>
+      `;
+
+      teamContainer.appendChild(card);
+    });
+  }
+
 
 });
