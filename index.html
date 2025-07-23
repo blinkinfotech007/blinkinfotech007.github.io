@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blink Infotech - Make inovation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="company-logo"></div>
+    <h1 class="company-name"></h1>
+  </div>
+
+  <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  <nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero home-bg">
+  <div class="hero-content">
+    <h2>Hi, We're <span class="company-name-accent"></span></h2>
+    <p>We are <span id="dynamic-text" class="company-name-accent"></span></p>
+    <p class="hero-desc">We are committed to developing innovative mobile applications that succeed globally.</p>
+
+    <div class="social-connect">
+      <p>Connect with us:</p>
+      <div class="social-buttons">
+        <div class="social-button"><a href="https://instagram.com" class="social-icon instagram" target="_blank"><i class="fab fa-instagram"></i></a></div>
+        <div class="social-button"><a href="https://linkedin.com" class="social-icon linkedin" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+        <div class="social-button"><a href="https://facebook.com" class="social-icon facebook" target="_blank"><i class="fab fa-facebook"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-light">
+  <h3 class="section-title">Services</h3>
+  <p class="section-subtitle">What We Do</p>
+  <div class="grid">
+    <div class="card">
+      <i class="fas fa-pencil-ruler" style="color: #ec4899;"></i>
+      <h4>UI/UX Design</h4>
+      <p>Making the most user-friendly application is our top-most priority.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-mobile-alt" style="color: #3b82f6;"></i>
+      <h4>App Development</h4>
+      <p>Developing robust mobile applications with market-first features.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chart-line" style="color: #10b981;"></i>
+      <h4>Market</h4>
+      <p>Years of app market experience enables us to reach audience globally.</p>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <h3 class="section-title">Client Reviews</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client A" class="review-avatar">
+      <p>“Professional and high-quality service! Blink Infotech exceeded expectations.”</p>
+      <h4>- Client A</h4>
+    </div>
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client B" class="review-avatar">
+      <p>“Their mobile app solution helped scale our operations quickly.”</p>
+      <h4>- Client B</h4>
+    </div>
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Client C" class="review-avatar">
+      <p>“Creative and tech-savvy team. Highly recommend for startups!”</p>
+      <h4>- Client C</h4>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <h3 class="section-title">Blog</h3>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="blog-image">
+      <h4>Why Your Business Needs a Website in 2025</h4>
+      <p>Discover why an online presence is crucial and how we can help you get started.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="blog-image">
+      <h4>Trends in Mobile App Design</h4>
+      <p>Explore what's hot in UX/UI and how we implement them for client apps.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549921296-3a6b73e3f4cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="blog-image">
+      <h4>Top 5 IT Trends to Watch in 2025</h4>
+      <p>Stay ahead with AI, blockchain, cloud, and emerging tech that are reshaping industries.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3 class="section-title">Contact Us</h3>
+  <div class="contact-container">
+    <div class="contact-info">
+      <!-- <h4 class="company-name"></h4> -->
+      <div class="brand">
+        <div class="company-logo"></div>
+        <h1 class="company-name"></h1>
+      </div>
+      <p class="company-address"></p>
+      <p class="company-email"><strong>Email:</strong></p>
+      <h5>FIND WITH ME</h5>
+      <div class="social-icons">
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.380472161668!2d72.88716617488794!3d21.17839548258395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fbfcae59a35%3A0x59aa8e8c33c1dcdf!2sSarthana%20Jakatnaka%2C%20Surat%2C%20Gujarat%20395006!5e0!3m2!1sen!2sin!4v1711885206921!5m2!1sen!2sin"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <form class="contact-form" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; <span id="year"></span> <span class="company-name"></span>. All rights reserved.</p>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
