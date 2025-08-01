@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("a.instagram").forEach(el => el.href = companyInfo.socials.instagram);
   document.querySelectorAll("a.linkedin").forEach(el => el.href = companyInfo.socials.linkedin);
   document.querySelectorAll("a.facebook").forEach(el => el.href = companyInfo.socials.facebook);
+   document.querySelectorAll("a.x").forEach(el => el.href = companyInfo.socials.x);
 
   document.querySelectorAll(".contact-form").forEach(form => {
     form.action = companyInfo.contactFormAction;
