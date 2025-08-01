@@ -8,9 +8,10 @@ const companyInfo = {
   address: `Gujarat, India\nShop-4, Nilkanth Heights,\nNear Om Residency,\nSarthana Jakatnaka, Nana Varachha,\nSurat, Gujarat - 395006`,
   contactFormAction: "https://formsubmit.co/blinkinfotech007@gmail.com",
   socials: {
-    instagram: "https://instagram.com/blinkinfotech",
+    instagram: "https://instagram.com/blink.infotech",
     linkedin: "https://linkedin.com/company/blinkinfotech",
-    facebook: "https://facebook.com/blinkinfotech"
+    facebook: "https://www.facebook.com/profile.php?id=61578623747029",
+    x: "https://x.com/blinkinfo007"
   },
   teamMembers: [
     {
