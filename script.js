@@ -11,3 +11,11 @@ function updateText() {
 }
 updateText();
 setInterval(updateText, 1000);
+window.addEventListener('DOMContentLoaded', () => {
+    const dialog = document.getElementById('contactDialog');
+    if (dialog && typeof dialog.showModal === 'function') {
+      setTimeout(() => {
+        dialog.showModal();
+      }, 2000); // 2000 milliseconds = 2 seconds
+    }
+  });
