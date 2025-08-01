@@ -346,3 +346,49 @@ footer {
   object-fit: contain;
   margin-bottom: 1rem;
 }
+
+/* Center the dialog */
+.contact-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 90%;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 30px; /* padding inside the dialog */
+  border: none;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* Dimmed background */
+.contact-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Form buttons layout */
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Button styles */
+.dialog-actions button {
+  padding: 10px 20px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-actions button:hover {
+  background-color: #2563eb;
+}
