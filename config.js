@@ -16,13 +16,13 @@ const companyInfo = {
   teamMembers: [
     {
       name: "Raj Bhanderi",
-      role: "Android Developer",
+      role: "Android Developer (CEO)",
       image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
       link: "https://example.com/raj"
     },
     {
       name: "Dhruv Bhanderi",
-      role: "Android/Flutter Developer",
+      role: "Android/Flutter Developer (CEO)",
       image: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
       link: "https://dhruvbhanderi4868.github.io/"
     }
@@ -78,3 +78,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
