@@ -19,3 +19,23 @@ window.addEventListener('DOMContentLoaded', () => {
       }, 2000); // 2000 milliseconds = 2 seconds
     }
   });
+fetch("https://api.npoint.io/5fea83f23a9e73f5863b") // Replace with your API endpoint
+    .then(response => response.json())
+    .then(data => {
+      const blogGrid = document.getElementById("blog-grid");
+      blogGrid.innerHTML = ""; // Clear existing content
+
+      data.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+          <img src="${item.image}" alt="${item.title}" class="blog-image">
+          <h4>${item.title}</h4>
+          <p>${item.description}</p>
+        `;
+
+        blogGrid.appendChild(card);
+      });
+    })
+    .catch(error => console.error("Error loading blog data:", error));
