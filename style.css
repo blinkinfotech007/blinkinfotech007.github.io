@@ -392,3 +392,8 @@ footer {
 .dialog-actions button:hover {
   background-color: #2563eb;
 }
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* ensures full clickable area */
+}
