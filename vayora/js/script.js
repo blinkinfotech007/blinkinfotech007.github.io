@@ -12,7 +12,7 @@ let carouselItems = [];
 let dots = [];
 
 // Fetch slides from JSON
-fetch('js/slides.json')
+fetch('data/hero.json')
     .then(response => response.json())
     .then(slidesData => {
         // Create slides dynamically
