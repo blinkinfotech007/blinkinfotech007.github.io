@@ -55,3 +55,21 @@ function showSlide(index){
     dots[index].classList.add('active');
     currentIndex = index;
 }
+
+// Collections Panel
+const collectionsWrapper = document.querySelector('.collections-wrapper');
+
+fetch('data/collections.json')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(conn => {
+            const item = document.createElement('div');
+            item.classList.add('collection-item');
+            item.innerHTML = `
+                <img src="${conn.image}" alt="${conn.name}">
+                <p>${conn.name}</p>
+            `;
+            collectionsWrapper.appendChild(item);
+        });
+    })
+    .catch(err => console.error("Failed to load collections.json:", err));
