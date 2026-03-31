@@ -13,5 +13,20 @@
     "title": "Silver Bracelet",
     "description": "Shine with style",
     "image": "https://via.placeholder.com/800x300"
+  },
+  {
+    "title": "Gold Ring",
+    "description": "Elegant & timeless design",
+    "image": "https://via.placeholder.com/800x300"
+  },
+  {
+    "title": "Diamond Necklace",
+    "description": "Luxury redefined",
+    "image": "https://via.placeholder.com/800x300"
+  },
+  {
+    "title": "Silver Bracelet",
+    "description": "Shine with style",
+    "image": "https://via.placeholder.com/800x300"
   }
 ]
