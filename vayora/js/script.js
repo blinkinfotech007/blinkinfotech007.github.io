@@ -56,20 +56,19 @@ function showSlide(index){
     currentIndex = index;
 }
 
-// Connections Panel
 const collectionsWrapper = document.querySelector('.collections-wrapper');
 
 fetch('data/collections.json')
     .then(res => res.json())
     .then(data => {
-        data.forEach(conn => {
-            const item = document.createElement('div');
-            item.classList.add('collection-item');
-            item.innerHTML = `
-                <img src="${conn.image}" alt="${conn.name}">
-                <p>${conn.name}</p>
+        data.forEach(item => {
+            const div = document.createElement('div');
+            div.classList.add('collection-item');
+            div.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <p>${item.name}</p>
             `;
-            collectionsWrapper.appendChild(item);
+            collectionsWrapper.appendChild(div);
         });
     })
-    .catch(err => console.error("Failed to load connections.json:", err));
+    .catch(err => console.error("Failed to load collections.json:", err));
