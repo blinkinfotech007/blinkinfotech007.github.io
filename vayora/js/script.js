@@ -56,7 +56,7 @@ function showSlide(index){
     currentIndex = index;
 }
 
-// Collections Panel
+// Connections Panel
 const collectionsWrapper = document.querySelector('.collections-wrapper');
 
 fetch('data/collections.json')
@@ -72,4 +72,4 @@ fetch('data/collections.json')
             collectionsWrapper.appendChild(item);
         });
     })
-    .catch(err => console.error("Failed to load collections.json:", err));
+    .catch(err => console.error("Failed to load connections.json:", err));
