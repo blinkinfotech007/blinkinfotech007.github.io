@@ -4,5 +4,10 @@
     { "image": "assets/logo.svg", "name": "Clara" },
     { "image": "assets/logo.svg", "name": "David" },
     { "image": "assets/logo.svg", "name": "Eva" },
+    { "image": "assets/logo.svg", "name": "Alice" },
+    { "image": "assets/logo.svg", "name": "Bob" },
+    { "image": "assets/logo.svg", "name": "Clara" },
+    { "image": "assets/logo.svg", "name": "David" },
+    { "image": "assets/logo.svg", "name": "Eva" },
     { "image": "assets/logo.svg", "name": "Frank" }
 ]
