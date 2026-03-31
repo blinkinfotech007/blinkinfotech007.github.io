@@ -126,7 +126,7 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     .hamburger { display:flex; }
 }
 
-/* collections Panel */
+/*/* collections Panel
 .collections {
     padding: 60px 0;
     background: #fefbf5;
@@ -152,7 +152,6 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     border-radius: 2px;
 }
 
-/* Scrollable wrapper */
 .collections-wrapper {
     display: flex;
     gap: 30px;
@@ -170,7 +169,6 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     border-radius: 4px;
 }
 
-/* Collections Panel Luxury */
 .collections {
     padding: 60px 0;
     background: #fefbf5;
@@ -196,7 +194,6 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     border-radius: 2px;
 }
 
-/* Scrollable wrapper */
 .collections-wrapper {
     display: flex;
     gap: 35px;
@@ -206,14 +203,12 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     scroll-behavior: smooth;
     justify-content: center;
     align-items: center;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS 
 }
 
-/* Hide scrollbar */
 .collections-wrapper::-webkit-scrollbar { display: none; }
 .collections-wrapper { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Collection item */
 .collection-item {
     flex: 0 0 auto;
     width: 150px;
@@ -243,16 +238,49 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     text-align: center;
 }
 
-/* Hover effect for luxury feel */
 .collection-item:hover img {
     transform: scale(1.15);
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* Responsive */
+/* Responsive 
 @media screen and (max-width: 768px) {
     .collection-item { width: 120px; }
     .collection-item img { width: 100px; height: 100px; }
     .collections-title { font-size: 28px; }
     .collections-wrapper { gap: 20px; padding: 15px; }
+}*/
+
+/* Collections Panel Luxury - Fixed for many items */
+.collections-wrapper {
+    display: flex;
+    gap: 35px;
+    overflow-x: auto;
+    padding: 20px 40px; /* Add some padding left & right for luxury spacing */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    align-items: center;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    justify-content: flex-start; /* Important: remove center alignment */
+}
+
+/* Hide scrollbar */
+.collections-wrapper::-webkit-scrollbar { display: none; }
+.collections-wrapper { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Collection item */
+.collection-item {
+    flex: 0 0 auto; /* prevent shrinking */
+    scroll-snap-align: start;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px){
+    .collections-wrapper { padding: 15px 20px; gap: 20px; }
+    .collection-item { width: 120px; }
 }
