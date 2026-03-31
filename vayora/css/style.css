@@ -126,49 +126,7 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     .hamburger { display:flex; }
 }
 
-/*/* collections Panel
-.collections {
-    padding: 60px 0;
-    background: #fefbf5;
-    font-family: 'Playfair Display', serif;
-}
-
-.collections-title {
-    font-size: 38px;
-    text-align: center;
-    color: #1a1a1a;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    position: relative;
-}
-.collections-title::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background: #d4af37;
-    margin: 15px auto 0;
-    border-radius: 2px;
-}
-
-.collections-wrapper {
-    display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    padding: 0 20px;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.collections-wrapper::-webkit-scrollbar {
-    height: 8px;
-}
-.collections-wrapper::-webkit-scrollbar-thumb {
-    background: #d4af37;
-    border-radius: 4px;
-}
-
+/* Collections Panel Luxury */
 .collections {
     padding: 60px 0;
     background: #fefbf5;
@@ -194,31 +152,35 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     border-radius: 2px;
 }
 
+/* Scrollable wrapper */
 .collections-wrapper {
     display: flex;
     gap: 35px;
     overflow-x: auto;
-    padding: 20px 10px;
+    padding: 20px 40px; /* padding on left/right */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    justify-content: center;
     align-items: center;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS 
+    justify-content: flex-start; /* keep items aligned start */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
 }
 
+/* Hide scrollbar completely */
 .collections-wrapper::-webkit-scrollbar { display: none; }
 .collections-wrapper { -ms-overflow-style: none; scrollbar-width: none; }
 
+/* Each Collection Item */
 .collection-item {
-    flex: 0 0 auto;
+    flex: 0 0 auto; /* do not shrink */
+    scroll-snap-align: start;
     width: 150px;
     text-align: center;
-    scroll-snap-align: center;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
     cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Collection Item Image */
 .collection-item img {
     width: 130px;
     height: 130px;
@@ -229,58 +191,25 @@ footer { background:#1a1a1a; color:#fff; padding:50px 0 20px 0; font-family:'Mon
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Item name */
 .collection-item p {
     margin-top: 12px;
     font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
     letter-spacing: 0.5px;
-    text-align: center;
 }
 
+/* Hover luxury effect */
 .collection-item:hover img {
     transform: scale(1.15);
     box-shadow: 0 12px 30px rgba(0,0,0,0.35);
 }
 
-/* Responsive 
+/* Responsive adjustments */
 @media screen and (max-width: 768px) {
+    .collections-wrapper { padding: 15px 20px; gap: 20px; }
     .collection-item { width: 120px; }
     .collection-item img { width: 100px; height: 100px; }
     .collections-title { font-size: 28px; }
-    .collections-wrapper { gap: 20px; padding: 15px; }
-}*/
-
-/* Collections Panel Luxury - Fixed for many items */
-.collections-wrapper {
-    display: flex;
-    gap: 35px;
-    overflow-x: auto;
-    padding: 20px 40px; /* Add some padding left & right for luxury spacing */
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    align-items: center;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-    justify-content: flex-start; /* Important: remove center alignment */
-}
-
-/* Hide scrollbar */
-.collections-wrapper::-webkit-scrollbar { display: none; }
-.collections-wrapper { -ms-overflow-style: none; scrollbar-width: none; }
-
-/* Collection item */
-.collection-item {
-    flex: 0 0 auto; /* prevent shrinking */
-    scroll-snap-align: start;
-    width: 150px;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px){
-    .collections-wrapper { padding: 15px 20px; gap: 20px; }
-    .collection-item { width: 120px; }
 }
