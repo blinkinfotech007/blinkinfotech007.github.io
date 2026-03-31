@@ -1,63 +1,57 @@
-const btn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
+// Hamburger nav
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('show'));
 
-btn.addEventListener("click", () => {
-    nav.classList.toggle("show");
-});
+// Hero Carousel
+const hero = document.querySelector('.hero');
+const carouselDotsContainer = hero.querySelector('.carousel-dots');
 
-// ================= HERO SLIDER =================
-const slidesContainer = document.getElementById("slides");
+let currentIndex = 0;
+let carouselItems = [];
+let dots = [];
 
-fetch("data/hero.json")
-    .then(res => res.json())
-    .then(data => {
-        const totalSlides = data.length;
-
-        // Set slides container width dynamically
-        slidesContainer.style.width = `${totalSlides * 100}%`;
-
-        data.forEach(item => {
-            const slide = document.createElement("div");
-            slide.classList.add("slide");
-            slide.style.width = `${100 / totalSlides}%`; // Each slide = 1/totalSlides of container
-
-            slide.innerHTML = `
-                <img src="${item.image}" alt="">
-                <div class="slide-content">
-                    <h2>${item.title}</h2>
-                    <p>${item.description}</p>
+// Fetch slides from JSON
+fetch('js/slides.json')
+    .then(response => response.json())
+    .then(slidesData => {
+        // Create slides dynamically
+        slidesData.forEach((slide, index) => {
+            const slideDiv = document.createElement('div');
+            slideDiv.classList.add('carousel-item');
+            if(index === 0) slideDiv.classList.add('active');
+            slideDiv.innerHTML = `
+                <img src="${slide.image}" alt="${slide.title}">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-text">
+                    <h2>${slide.title}</h2>
+                    <p>${slide.desc}</p>
+                    <a href="${slide.link}" class="hero-btn">Shop Now</a>
                 </div>
             `;
-            slidesContainer.appendChild(slide);
+            hero.insertBefore(slideDiv, carouselDotsContainer);
+            carouselItems.push(slideDiv);
+
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if(index === 0) dot.classList.add('active');
+            dot.addEventListener('click', ()=> showSlide(index));
+            carouselDotsContainer.appendChild(dot);
+            dots.push(dot);
         });
 
-        startSlider(totalSlides);
+        // Auto-scroll
+        setInterval(()=>{ showSlide((currentIndex+1)%carouselItems.length); }, 4000);
+    })
+    .catch(error => console.error("Failed to load slides.json:", error));
+
+// Show slide function
+function showSlide(index){
+    carouselItems.forEach((item,i)=>{
+        item.classList.remove('active');
+        dots[i].classList.remove('active');
     });
-
-// ================= AUTO SLIDER =================
-function startSlider(totalSlides) {
-    let index = 0;
-
-    setInterval(() => {
-        index = (index + 1) % totalSlides;
-        slidesContainer.style.transform = `translateX(-${index * (100 / totalSlides)}%)`;
-    }, 3000);
+    carouselItems[index].classList.add('active');
+    dots[index].classList.add('active');
+    currentIndex = index;
 }
-
-// ================= LOAD COLLECTIONS FROM JSON =================
-const collectionGrid = document.getElementById("collection-grid");
-
-fetch("data/collections.json")
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(item => {
-            const card = document.createElement("a");
-            card.classList.add("collection-card");
-            card.href = item.link;
-            card.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
-                <p>${item.name}</p>
-            `;
-            collectionGrid.appendChild(card);
-        });
-    });

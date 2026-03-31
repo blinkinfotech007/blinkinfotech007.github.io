@@ -1,32 +1,20 @@
 [
-  {
-    "title": "Gold Ring",
-    "description": "Elegant & timeless design",
-    "image": "https://via.placeholder.com/800x300"
-  },
-  {
-    "title": "Diamond Necklace",
-    "description": "Luxury redefined",
-    "image": "https://via.placeholder.com/800x300"
-  },
-  {
-    "title": "Silver Bracelet",
-    "description": "Shine with style",
-    "image": "https://via.placeholder.com/800x300"
-  },
-  {
-    "title": "Gold Ring",
-    "description": "Elegant & timeless design",
-    "image": "https://via.placeholder.com/800x300"
-  },
-  {
-    "title": "Diamond Necklace",
-    "description": "Luxury redefined",
-    "image": "https://via.placeholder.com/800x300"
-  },
-  {
-    "title": "Silver Bracelet",
-    "description": "Shine with style",
-    "image": "https://via.placeholder.com/800x300"
-  }
+    { 
+        "image": "assets/logo.svg", 
+        "title": "Elegant Necklace", 
+        "desc": "Luxury crafted for you", 
+        "link": "#" 
+    },
+    { 
+        "image": "assets/logo.svg", 
+        "title": "Gold Ring", 
+        "desc": "Shine in style", 
+        "link": "#" 
+    },
+    { 
+        "image": "assets/logo.svg", 
+        "title": "Diamond Bracelet", 
+        "desc": "Exquisite elegance", 
+        "link": "#" 
+    }
 ]
