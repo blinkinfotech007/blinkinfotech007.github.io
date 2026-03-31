@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Bracelets",
+    "image": "https://via.placeholder.com/150",
+    "link": "bracelets.html"
+  },
+  {
+    "name": "Men's Rings",
+    "image": "https://via.placeholder.com/150",
+    "link": "mens-ring.html"
+  },
+  {
+    "name": "Ladies Rings",
+    "image": "https://via.placeholder.com/150",
+    "link": "ladies-ring.html"
+  },
+  {
+    "name": "Chains",
+    "image": "https://via.placeholder.com/150",
+    "link": "chains.html"
+  }
+]

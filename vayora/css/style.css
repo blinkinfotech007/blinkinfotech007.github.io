@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER */
+.header {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 50px;
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #C0C0C0;
+}
+
+/* NAV */
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -5px;
+    left: 0;
+    background: gold;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav a:hover {
+    color: gold;
+}
+
+/* MENU */
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ================= HERO SLIDER ================= */
+.hero {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.slide-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: gold;
+}
+
+/* ================= COLLECTIONS ================= */
+.collections {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+/* ⭐ SCROLLABLE ROW */
+.collection-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* Hide scrollbar (optional) */
+.collection-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.collection-card {
+    min-width: 120px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+/* ROUND IMAGE */
+.collection-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid gold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.collection-card p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* HOVER */
+.collection-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= PRODUCTS ================= */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav a {
+        padding: 15px;
+        border-top: 1px solid #222;
+        text-align: center;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slide img {
+        height: 220px;
+    }
+
+    .logo {
+        width: 35px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+}
